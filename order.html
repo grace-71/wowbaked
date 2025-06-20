@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>訂購表單 - 手作甜點屋</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>訂購表單</h1>
+    <!-- <p>選好甜點後，填寫訂單與 IG 帳號，即可享優惠！</p> -->
+  </header>
+
+   <nav>
+    <a href="index.html">蛋糕介紹</a>
+    <a href="order.html">訂購表單</a>
+  </nav>
+
+  <div class="content" id="order">
+    <h2>訂購資訊</h2>
+    <form>
+      <label for="name">姓名</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="instagram">Instagram 帳號名稱</label>
+      <input type="text" id="instagram" name="instagram" placeholder="@your_ig" required>
+
+      <label for="cake">選擇蛋糕</label>
+      <select id="cake" name="cake">
+        <option value="6吋">提拉米蘇 6 吋</option>
+        <option value="350G">提拉米蘇 350G</option>
+      </select>
+
+      <label for="qty">數量</label>
+      <input type="number" id="qty" name="qty" min="1" value="1">
+
+      <!-- <label for="address">收件地址</label>
+      <textarea id="address" name="address" rows="3" required></textarea> -->
+
+      <button type="submit">送出訂單</button>
+    </form>
+
+    <div class="note">
+      <h3>訂購注意事項</h3>
+      <ul>
+        <li>✔️ 只接受轉帳付款</li>
+        <li>✔️ 只接受預訂／每日限量</li>
+        <li>✔️ 目前只開放自取，取貨地點：<strong>西松高中正門</strong></li>
+      </ul>
+    </div>
+
+    <div class="map">
+      <h3>取貨地點地圖：西松高中正門</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.176836419627!2d121.55778511500038!3d25.050276644265288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abde8d37354f%3A0xd314c53513dd61c!2z5ZyL6Iqx5biC5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1718888888888"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <footer>
+    <p>追蹤我們的社群帳號獲得最新優惠：</p>
+    <a href="https://www.instagram.com/your_cake_shop" target="_blank">Instagram @your_cake_shop</a>
+  </footer>
+</body>
+</html>

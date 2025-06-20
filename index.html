@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WOW BAKED</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Ribeye&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body>
+  <header>
+    <div class="header-content">
+        <img src="logo.jpg" alt="WOW BAKED Logo">
+        <div class="text-block">
+            <h1>wowbaked</h1>
+            <div class="subtitle-center">TIRAMISU</div>
+        </div>
+    </div>
+    <p  class="subtitle">從一份單純的心意開始，想做出讓朋友們微笑的提拉米蘇。</p>
+  </header>
+
+  <nav>
+    <a href="index.html">蛋糕介紹</a>
+    <a href="order.html">訂購表單</a>
+  </nav>
+
+  <div class="content" id="cakes">
+    <!-- 🍰 提拉米蘇 6 吋 -->
+    <div class="cake">
+    <div class="slider-container">
+        <div class="slider-track">
+            <img src="6-1.jpg" alt="提拉米蘇6吋 圖1">
+            <img src="6-2.jpg" alt="提拉米蘇6吋 圖2">
+        </div>
+        <button class="slider-btn prev">&#10094;</button>
+        <button class="slider-btn next">&#10095;</button>
+    </div>
+    <div class="cake-info">
+        <h2>提拉米蘇 6 吋</h2>
+        <p class="price">原價：$980 <br><span class="discount">追蹤 IG 特價：$850</span></p>
+        <p class="storage">冷藏建議 2～3 日內／冷凍可放 14 天內享用完畢</p>
+    </div>
+    </div>
+
+    <!-- 🍰 提拉米蘇 350G -->
+    <div class="cake">
+     <div class="slider-container">
+        <div class="slider-track">
+            <img src="3-1.jpg" alt="提拉米蘇350g 圖1">
+            <img src="3-2.jpg" alt="提拉米蘇350g 圖2">
+        </div>
+        <button class="slider-btn prev">&#10094;</button>
+        <button class="slider-btn next">&#10095;</button>
+    </div>
+    <div class="cake-info">
+        <h2>提拉米蘇 350G</h2>
+        <p class="price">原價：$250 <br><span class="discount">追蹤 IG 特價：$200</span></p>
+        <p class="storage">冷藏建議 2～3 日內／冷凍可放 14 天內享用完畢</p>
+    </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>追蹤我們的社群帳號獲得最新資訊：</p>
+    <a href="https://www.instagram.com/w0w.baked" target="_blank">Instagram @w0w.baked</a>
+  </footer>
+
+  <!-- 動畫----------------------------------------------------------------- -->
+  <script>
+    document.querySelectorAll('.slider-container').forEach(container => {
+        const track = container.querySelector('.slider-track');
+        const slides = container.querySelectorAll('img');
+        const prevBtn = container.querySelector('.prev');
+        const nextBtn = container.querySelector('.next');
+        let currentIndex = 0;
+
+        function updateSlider() {
+        const offset = -currentIndex * 300; // 每張寬度300px
+        track.style.transform = `translateX(${offset}px)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlider();
+        });
+
+        nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider();
+        });
+
+        updateSlider(); // 初始化
+    });
+  </script>
+  <!-- ------------------------------------------------------------------------ -->
+
+</body>
+</html>
+
+
+
